@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { Page } from 'mlite-ui-components'
+import { Page, Social } from 'mlite-ui-components'
 import 'mlite-ui-components/dist/index.css'
 
 const App = () => {
   return (
     <Page>
-      <div>Le test</div>
+      <div>Hello UI Component Library!</div>
+      <Social type='twitter' href='https://twitter.mprieto.me' />
     </Page>
   )
 }
