@@ -13,16 +13,21 @@ npm install --save mlite-ui-components
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from "react"
 
-import MyComponent from 'mlite-ui-components'
-import 'mlite-ui-components/dist/index.css'
+import { Page, Social } from "mlite-ui-components"
+import "mlite-ui-components/dist/index.css"
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <Page>
+      <Comment lines={["Aloha", "From Hawaii", "@author Elvis"]} />
+      <Social type='twitter' href='https://twitter.mprieto.me' modifier='' />
+    </Page>
+  )
 }
+
+export default App
 ```
 
 ## License
