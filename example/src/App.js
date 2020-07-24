@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { ExampleComponent } from 'mlite-ui-components'
+import { Page } from 'mlite-ui-components'
 import 'mlite-ui-components/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <Page>
+      <div>Le test</div>
+    </Page>
+  )
 }
 
 export default App

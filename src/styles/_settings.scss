@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+$color-primary: #c6c6c6;
+$color-background: #313131;
+
+$fonts: (
+  primary: #{'Roboto',
+  sans-serif},
+  code: #{'Roboto Mono',
+  monospace}
+);
+
+/**************************************************/
+/* Screen sizes. Same breakpoints as bootstrap */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+/**************************************************/

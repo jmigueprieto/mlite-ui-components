@@ -1,0 +1,16 @@
+/* Add sass module styles here */
+@import 'settings';
+
+@mixin font-primary {
+  font-family: map-get($fonts, primary);
+}
+
+@mixin font-code {
+  font-family: map-get($fonts, code);
+}
+
+.page {
+  @include font-primary;
+  background-color: $color-background;
+  color: $color-primary;
+}
