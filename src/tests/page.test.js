@@ -1,7 +1,7 @@
-import { Page } from '..'
+import { Page } from ".."
 
-describe('Page', () => {
-  it('is truthy', () => {
+describe("Page", () => {
+  it("is truthy", () => {
     expect(Page).toBeTruthy()
   })
 })

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 import {
   Page,
@@ -7,13 +7,13 @@ import {
   Bytecode,
   Instruction,
   Literal
-} from 'mlite-ui-components'
-import 'mlite-ui-components/dist/index.css'
+} from "mlite-ui-components"
+import "mlite-ui-components/dist/index.css"
 
 const App = () => {
   return (
     <Page>
-      <Comment lines={['Aloha', 'From Hawaii', '@author Elvis']} />
+      <Comment lines={["Aloha", "From Hawaii", "@author Elvis"]} />
       <Bytecode>
         <Instruction>NEW HomePage</Instruction>
         <Instruction>DUP</Instruction>

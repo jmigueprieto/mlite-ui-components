@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import styles from './styles/styles.module.scss'
+import React, { Fragment } from "react"
+import styles from "./styles/styles.module.scss"
 
-import ContactIcon from './assets/svg/contact.svg'
-import FacebookIcon from './assets/svg/facebook.svg'
-import GithubIcon from './assets/svg/github.svg'
-import InstagramIcon from './assets/svg/instagram.svg'
-import LinkedinIcon from './assets/svg/linkedin.svg'
-import TwitterIcon from './assets/svg/twitter.svg'
+import ContactIcon from "./assets/svg/contact.svg"
+import FacebookIcon from "./assets/svg/facebook.svg"
+import GithubIcon from "./assets/svg/github.svg"
+import InstagramIcon from "./assets/svg/instagram.svg"
+import LinkedinIcon from "./assets/svg/linkedin.svg"
+import TwitterIcon from "./assets/svg/twitter.svg"
 
 export const Page = ({ children }) => {
   return <div className={styles.page}>{children}</div>
@@ -33,7 +33,7 @@ export const Footer = ({ children }) => {
 
 export const Bytecode = ({ children }) => {
   return (
-    <p className={styles['bytecode']}>
+    <p className={styles["bytecode"]}>
       {children.map((instruction, index) => (
         <Fragment key={index}>
           {instruction}
@@ -49,17 +49,17 @@ export const Instruction = ({ children }) => {
 }
 
 export const Literal = ({ children }) => {
-  return <span className={styles['literal']}>{children}</span>
+  return <span className={styles["literal"]}>{children}</span>
 }
 
 export const Social = ({ type, href }) => {
   const img = {
-    contact: { src: ContactIcon, alt: 'Contact' },
-    facebook: { src: FacebookIcon, alt: 'Facebook' },
-    github: { src: GithubIcon, alt: 'Github' },
-    instagram: { src: InstagramIcon, alt: 'Instagram' },
-    linkedin: { src: LinkedinIcon, alt: 'LinkedIn' },
-    twitter: { src: TwitterIcon, alt: 'Twitter' }
+    contact: { src: ContactIcon, alt: "Contact" },
+    facebook: { src: FacebookIcon, alt: "Facebook" },
+    github: { src: GithubIcon, alt: "Github" },
+    instagram: { src: InstagramIcon, alt: "Instagram" },
+    linkedin: { src: LinkedinIcon, alt: "LinkedIn" },
+    twitter: { src: TwitterIcon, alt: "Twitter" }
   }[type]
 
   return (
