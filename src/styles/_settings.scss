@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
 $color-primary: #c6c6c6;
 $color-background: #313131;
+$color-code: #fff;
+$color-code-comment: #f4d07d;
+$color-code-literal: #6a8859;
 
 $fonts: (
-  primary: #{'Roboto',
+  primary: #{"Roboto",
   sans-serif},
-  code: #{'Roboto Mono',
+  code: #{"Roboto Mono",
   monospace}
 );
 

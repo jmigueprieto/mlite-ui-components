@@ -1,13 +1,32 @@
 import React from 'react'
 
-import { Page, Social } from 'mlite-ui-components'
+import {
+  Page,
+  Social,
+  Comment,
+  Bytecode,
+  Instruction,
+  Literal
+} from 'mlite-ui-components'
 import 'mlite-ui-components/dist/index.css'
 
 const App = () => {
   return (
     <Page>
-      <div>Hello UI Component Library!</div>
+      <Comment lines={['Aloha', 'From Hawaii', '@author Elvis']} />
+      <Bytecode>
+        <Instruction>NEW HomePage</Instruction>
+        <Instruction>DUP</Instruction>
+        <Instruction>INVOKESPECIAL HomePage.&lt;init&gt; ()V</Instruction>
+        <Instruction>
+          LDC <Literal>"Hello World!"</Literal>
+        </Instruction>
+        <Instruction>
+          INVOKEVIRTUAL HomePage.publish (Ljava/lang/String;)V
+        </Instruction>
+      </Bytecode>
       <Social type='twitter' href='https://twitter.mprieto.me' />
+      <Social type='github' href='https://github.com/jmigueprieto' />
     </Page>
   )
 }

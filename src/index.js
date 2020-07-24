@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styles from './styles/styles.module.scss'
 
 import ContactIcon from './assets/svg/contact.svg'
@@ -12,28 +12,59 @@ export const Page = ({ children }) => {
   return <div className={styles.page}>{children}</div>
 }
 
-export const Comment = ({ children }) => {}
+export const Comment = ({ lines }) => {
+  return (
+    <p className={styles.comment}>
+      /** <br />
+      {lines.map((line, index) => (
+        <span key={index}>
+          &nbsp;* {line}
+          <br />
+        </span>
+      ))}
+      &nbsp;*/
+    </p>
+  )
+}
 
-export const Footer = ({ children }) => {}
+export const Footer = ({ children }) => {
+  return <div className={styles.footer}>{children}</div>
+}
 
-export const ByteCodeBlock = ({ children }) => {}
+export const Bytecode = ({ children }) => {
+  return (
+    <p className={styles['bytecode']}>
+      {children.map((instruction, index) => (
+        <Fragment key={index}>
+          {instruction}
+          <br />
+        </Fragment>
+      ))}
+    </p>
+  )
+}
 
-export const ByteCodeInstruction = ({ children }) => {}
+export const Instruction = ({ children }) => {
+  return <span>{children}</span>
+}
 
-//TODO alt image
+export const Literal = ({ children }) => {
+  return <span className={styles['literal']}>{children}</span>
+}
+
 export const Social = ({ type, href }) => {
-  const src = {
-    contact: ContactIcon,
-    facebook: FacebookIcon,
-    github: GithubIcon,
-    instagram: InstagramIcon,
-    linkedin: LinkedinIcon,
-    twitter: TwitterIcon
+  const img = {
+    contact: { src: ContactIcon, alt: 'Contact' },
+    facebook: { src: FacebookIcon, alt: 'Facebook' },
+    github: { src: GithubIcon, alt: 'Github' },
+    instagram: { src: InstagramIcon, alt: 'Instagram' },
+    linkedin: { src: LinkedinIcon, alt: 'LinkedIn' },
+    twitter: { src: TwitterIcon, alt: 'Twitter' }
   }[type]
 
   return (
     <a href={href}>
-      <img src={src}></img>
+      <img className={styles.icon} src={img.src} alt={img.alt}></img>
     </a>
   )
 }
