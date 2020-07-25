@@ -13,7 +13,7 @@ import "mlite-ui-components/dist/index.css"
 const App = () => {
   return (
     <Page>
-      <Comment lines={["Aloha", "From Hawaii", "@author Elvis"]} />
+      <Comment lines={["Aloha", "From Hawaii", "@author It's Elvis"]} />
       <Bytecode>
         <Instruction>NEW HomePage</Instruction>
         <Instruction>DUP</Instruction>
