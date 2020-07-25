@@ -1,24 +1,24 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import { withKnobs, array, select } from "@storybook/addon-knobs"
+import { withKnobs, array, select, text } from "@storybook/addon-knobs"
 // import { withStorySource } from "@storybook/addon-storysource"
-import { Page, Social, Comment } from "../"
+import { Container, Social, Comment } from "../"
 
 storiesOf("Components", module)
   .addDecorator(withKnobs)
   // .addDecorator(withStorySource)
-  .add("Page", () => (
-    <Page>
+  .add("Container", () => (
+    <Container>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
       tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi
       consequat. Quis aute iure reprehenderit in voluptate velit esse cillum
       dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Page>
+    </Container>
   ))
   .add("Social", () => (
-    <Page>
+    <Container>
       <Social
         type={select(
           "type",
@@ -32,12 +32,13 @@ storiesOf("Components", module)
           },
           "contact"
         )}
-        href='https://linkToSomeWhere'
+        href={text("href", "https://mprieto.me")}
+        target={text("target", "_blank")}
       />
-    </Page>
+    </Container>
   ))
   .add("Comment", () => (
-    <Page>
+    <Container>
       <Comment
         lines={array("Lines within the comment", [
           "This is a function",
@@ -45,5 +46,5 @@ storiesOf("Components", module)
           "And it will return a value"
         ])}
       />
-    </Page>
+    </Container>
   ))

@@ -1,5 +1,5 @@
 import React from "react"
-import { Container } from ".."
+import Container from "./Container"
 import { configure, shallow } from "enzyme"
 import Adapter from "enzyme-adapter-react-16"
 
