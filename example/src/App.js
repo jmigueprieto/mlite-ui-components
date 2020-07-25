@@ -1,7 +1,7 @@
 import React from "react"
 
 import {
-  Page,
+  Container,
   Social,
   Comment,
   Bytecode,
@@ -12,14 +12,14 @@ import "mlite-ui-components/dist/index.css"
 
 const App = () => {
   return (
-    <Page>
+    <Container>
       <Comment lines={["Aloha", "From Hawaii", "@author It's Elvis"]} />
       <Bytecode>
         <Instruction>NEW HomePage</Instruction>
         <Instruction>DUP</Instruction>
         <Instruction>INVOKESPECIAL HomePage.&lt;init&gt; ()V</Instruction>
         <Instruction>
-          LDC <Literal>"Hello World!"</Literal>
+          LDC <Literal>"Hello Worldoss!"</Literal>
         </Instruction>
         <Instruction>
           INVOKEVIRTUAL HomePage.publish (Ljava/lang/String;)V
@@ -27,7 +27,7 @@ const App = () => {
       </Bytecode>
       <Social type='twitter' href='https://twitter.mprieto.me' />
       <Social type='github' href='https://github.com/jmigueprieto' />
-    </Page>
+    </Container>
   )
 }
 

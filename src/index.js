@@ -8,7 +8,7 @@ import InstagramIcon from "./assets/svg/instagram.svg"
 import LinkedinIcon from "./assets/svg/linkedin.svg"
 import TwitterIcon from "./assets/svg/twitter.svg"
 
-export const Page = ({ children }) => {
+export const Container = ({ children }) => {
   return <div className={styles.page}>{children}</div>
 }
 
