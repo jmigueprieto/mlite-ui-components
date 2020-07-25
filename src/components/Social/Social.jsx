@@ -1,14 +1,16 @@
-import React from "react"
-import styles from "../../styles/styles.module.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "../../styles/styles.module.scss";
 
-import ContactIcon from "../../assets/svg/contact.svg"
-import FacebookIcon from "../../assets/svg/facebook.svg"
-import GithubIcon from "../../assets/svg/github.svg"
-import InstagramIcon from "../../assets/svg/instagram.svg"
-import LinkedinIcon from "../../assets/svg/linkedin.svg"
-import TwitterIcon from "../../assets/svg/twitter.svg"
+import ContactIcon from "../../assets/svg/contact.svg";
+import FacebookIcon from "../../assets/svg/facebook.svg";
+import GithubIcon from "../../assets/svg/github.svg";
+import InstagramIcon from "../../assets/svg/instagram.svg";
+import LinkedinIcon from "../../assets/svg/linkedin.svg";
+import TwitterIcon from "../../assets/svg/twitter.svg";
 
 const Social = ({ type, href, target }) => {
+  console.log(type);
   const attrs = {
     contact: { src: ContactIcon, alt: "Contact" },
     facebook: { src: FacebookIcon, alt: "Facebook" },
@@ -16,19 +18,37 @@ const Social = ({ type, href, target }) => {
     instagram: { src: InstagramIcon, alt: "Instagram" },
     linkedin: { src: LinkedinIcon, alt: "LinkedIn" },
     twitter: { src: TwitterIcon, alt: "Twitter" }
-  }[type]
+  }[type];
 
   if (!attrs) {
-    throw Error(`Unknown type '${type}' of social icon`)
+    throw Error(`Unknown type '${type}' of social icon`);
   }
 
-  const img = <img className={styles.icon} src={attrs.src} alt={attrs.alt} />
+  if (!href) {
+    throw Error("href must be a valid URL");
+  }
 
   return (
     <a href={href} {...(target ? { target: target } : {})}>
-      {img}
+      <img className={styles.icon} src={attrs.src} alt={attrs.alt} />
     </a>
-  )
-}
+  );
+};
 
-export default Social
+Social.propTypes = {
+  /** An icon will be shown accordingly */
+  type: PropTypes.oneOf([
+    "contact",
+    "facebook",
+    "github",
+    "instagram",
+    "linkedin",
+    "twitter"
+  ]),
+  /** URL of the social media or mail for Contact */
+  href: PropTypes.string.isRequired,
+  /** The target attribute of the link i.e. _blank, _self, _parent, _top */
+  target: PropTypes.string
+};
+
+export default Social;

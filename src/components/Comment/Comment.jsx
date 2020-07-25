@@ -1,21 +1,26 @@
-import React from "react"
-import styles from "../../styles/styles.module.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "../../styles/styles.module.scss";
 
-const Comment = ({ lines }) => {
-  const initComment = "/**"
-  const endComment = " */"
+const Comment = ({ children }) => {
+  const initComment = "/**";
+  const endComment = "*/";
   return (
     <p className={styles.comment}>
       {initComment} <br />
-      {lines.map((line, index) => (
-        <span key={index}>
-          &nbsp;* {line}
-          <br />
-        </span>
-      ))}
-      {endComment}
+      {children
+        .filter((it) => typeof it === "string")
+        .map((line, index) => (
+          <div key={index}>&nbsp;* {line}</div>
+        ))}
+      &nbsp;{endComment}
     </p>
-  )
-}
+  );
+};
 
-export default Comment
+Comment.propTypes = {
+  /** The components of this library should be rendered within the Container */
+  children: PropTypes.node.isRequired
+};
+
+export default Comment;

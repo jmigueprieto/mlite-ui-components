@@ -1,29 +1,28 @@
-import React from "react"
+import React from "react";
 
 import {
   Container,
   Social,
   Comment,
   Bytecode,
-  Instruction,
   Literal
-} from "mlite-ui-components"
-import "mlite-ui-components/dist/index.css"
+} from "mlite-ui-components";
+import "mlite-ui-components/dist/index.css";
 
 const App = () => {
   return (
     <Container>
-      <Comment lines={["Aloha", "From Hawaii", "@author It's Elvis"]} />
+      <Comment>
+        Aloha <br />
+        From Hawaii! <br />
+        @author It's Elvis <br />
+      </Comment>
       <Bytecode>
-        <Instruction>NEW HomePage</Instruction>
-        <Instruction>DUP</Instruction>
-        <Instruction>INVOKESPECIAL HomePage.&lt;init&gt; ()V</Instruction>
-        <Instruction>
-          LDC <Literal>"¡Aló Mundillo!"</Literal>
-        </Instruction>
-        <Instruction>
-          INVOKEVIRTUAL HomePage.publish (Ljava/lang/String;)V
-        </Instruction>
+        NEW HomePage <br />
+        DUP <br />
+        INVOKESPECIAL HomePage.&lt;init&gt; ()V <br />
+        LDC <Literal>"¡Aló Mundillo!"</Literal> <br />
+        INVOKEVIRTUAL HomePage.publish (Ljava/lang/String;)V <br />
       </Bytecode>
       <Social type="twitter" href="https://twitter.com/jmigueprieto" />
       <Social
@@ -32,7 +31,7 @@ const App = () => {
         target="_blank"
       />
     </Container>
-  )
-}
+  );
+};
 
-export default App
+export default App;

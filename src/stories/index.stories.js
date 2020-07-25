@@ -1,12 +1,12 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import { withKnobs, array, select, text } from "@storybook/addon-knobs"
-// import { withStorySource } from "@storybook/addon-storysource"
+import { withKnobs, select, text } from "@storybook/addon-knobs"
+import { withInfo } from "@storybook/addon-info"
 import { Container, Social, Comment } from "../"
 
 storiesOf("Components", module)
   .addDecorator(withKnobs)
-  // .addDecorator(withStorySource)
+  .addDecorator(withInfo)
   .add("Container", () => (
     <Container>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
@@ -39,12 +39,11 @@ storiesOf("Components", module)
   ))
   .add("Comment", () => (
     <Container>
-      <Comment
-        lines={array("Lines within the comment", [
-          "This is a function",
-          "You can call it",
-          "And it will return a value"
-        ])}
-      />
+      <Comment>
+        This is a function
+        <br />
+        And it will return a value <br />
+        You can call it <br />
+      </Comment>
     </Container>
   ))
