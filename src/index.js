@@ -33,7 +33,7 @@ export const Footer = ({ children }) => {
 
 export const Bytecode = ({ children }) => {
   return (
-    <p className={styles["bytecode"]}>
+    <p className={styles.bytecode}>
       {children.map((instruction, index) => (
         <Fragment key={index}>
           {instruction}
@@ -49,7 +49,7 @@ export const Instruction = ({ children }) => {
 }
 
 export const Literal = ({ children }) => {
-  return <span className={styles["literal"]}>{children}</span>
+  return <span className={styles.literal}>{children}</span>
 }
 
 export const Social = ({ type, href }) => {
@@ -64,7 +64,7 @@ export const Social = ({ type, href }) => {
 
   return (
     <a href={href}>
-      <img className={styles.icon} src={img.src} alt={img.alt}></img>
+      <img className={styles.icon} src={img.src} alt={img.alt} />
     </a>
   )
 }

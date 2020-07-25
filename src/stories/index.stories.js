@@ -1,12 +1,12 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import { withKnobs, array, select } from "@storybook/addon-knobs"
-//import { withStorySource } from "@storybook/addon-storysource"
+// import { withStorySource } from "@storybook/addon-storysource"
 import { Page, Social, Comment } from "../"
 
 storiesOf("Components", module)
   .addDecorator(withKnobs)
-  //.addDecorator(withStorySource)
+  // .addDecorator(withStorySource)
   .add("Page", () => (
     <Page>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
