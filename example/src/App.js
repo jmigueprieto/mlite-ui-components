@@ -5,7 +5,8 @@ import {
   Social,
   Comment,
   Bytecode,
-  Literal
+  Literal,
+  Autocomplete
 } from "mlite-ui-components";
 import "mlite-ui-components/dist/index.css";
 
@@ -30,6 +31,25 @@ const App = () => {
         href="https://github.com/jmigueprieto"
         target="_blank"
       />
+      <Autocomplete
+        items={[
+          "C",
+          "C++",
+          "C#",
+          "Java",
+          "JavaScript",
+          "Kotlin",
+          "Groovy",
+          "Scala",
+          "TypeScript",
+          "Go",
+          "Visual Basic",
+          "Fortran",
+          "Python",
+          "R",
+          "SQL"
+        ].sort()}
+      ></Autocomplete>
     </Container>
   );
 };
