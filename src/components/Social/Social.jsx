@@ -10,7 +10,6 @@ import LinkedinIcon from "../../assets/svg/linkedin.svg";
 import TwitterIcon from "../../assets/svg/twitter.svg";
 
 const Social = ({ type, href, target }) => {
-  console.log(type);
   const attrs = {
     contact: { src: ContactIcon, alt: "Contact" },
     facebook: { src: FacebookIcon, alt: "Facebook" },
