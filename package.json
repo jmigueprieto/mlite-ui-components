@@ -1,7 +1,7 @@
 {
-  "name": "mlite-ui-components",
-  "version": "1.0.0",
-  "description": "UI Component Library for my mprieto.me",
+  "name": "@jmigueprieto/mlite-ui-components",
+  "version": "0.0.1",
+  "description": "UI Component Library used in mprieto.me",
   "author": "jmigueprieto",
   "license": "MIT",
   "repository": "jmigueprieto/mlite-ui-components",
