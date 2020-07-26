@@ -22,3 +22,14 @@
   width: calc(300px + 1rem);
   background-color: #fff;
 }
+
+.suggestion-item {
+  z-index: 9999;
+  color: #000;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.suggestion-item:hover {
+  background-color: aqua;
+}

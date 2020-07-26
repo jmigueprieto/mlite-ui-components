@@ -11,6 +11,34 @@ import {
 import "mlite-ui-components/dist/index.css";
 
 const App = () => {
+  const languages = [
+    "Ada",
+    "C",
+    "C++",
+    "C#",
+    "Clojure",
+    "Erlang",
+    "Basic",
+    "Java",
+    "JavaScript",
+    "Kotlin",
+    "Groovy",
+    "Scala",
+    "TypeScript",
+    "Go",
+    "Visual Basic",
+    "Fortran",
+    "Python",
+    "R",
+    "SQL",
+    "Bash",
+    "Lua",
+    "Rust",
+    "PHP",
+    "Swift",
+    "Ruby",
+    "Lisp"
+  ].sort();
   return (
     <Container>
       <Comment>
@@ -31,25 +59,7 @@ const App = () => {
         href="https://github.com/jmigueprieto"
         target="_blank"
       />
-      <Autocomplete
-        items={[
-          "C",
-          "C++",
-          "C#",
-          "Java",
-          "JavaScript",
-          "Kotlin",
-          "Groovy",
-          "Scala",
-          "TypeScript",
-          "Go",
-          "Visual Basic",
-          "Fortran",
-          "Python",
-          "R",
-          "SQL"
-        ].sort()}
-      ></Autocomplete>
+      <Autocomplete items={languages}></Autocomplete>
     </Container>
   );
 };

@@ -1,24 +1,33 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
 
-const Autocomplete = ({ items }) => {
+const Autocomplete = ({ items, placeholder }) => {
   const [value, setValue] = useState();
   const [showSuggestions, setShowSuggestions] = useState(false);
-  // const onKeyDown = (e) => {
-  //   console.log(e);
-  // };
+  const onKeyDown = (e) => {
+    if (e.keyCode === 27) {
+      setShowSuggestions(false);
+    } else {
+      setShowSuggestions(true);
+    }
+    //TODO handle arrow keys
+  };
 
   return (
     <div className={styles.container}>
       <input
+        placeholder={placeholder}
         type="text"
         className={styles.text}
         onFocus={(e) => setShowSuggestions(true)}
-        onBlur={(e) => setShowSuggestions(false)}
-        value={value}
         onChange={(e) => setValue(e.target.value)}
+        onKeyDown={onKeyDown}
+        onBlur={(e) => {
+          setTimeout(() => setShowSuggestions(false), 200);
+        }}
+        value={value}
       ></input>
-      {/* How do we add several items to className? */}
       {showSuggestions && (
         <ul className={styles.suggestions}>
           {items
@@ -26,7 +35,14 @@ const Autocomplete = ({ items }) => {
               (it) => !value || it.toLowerCase().startsWith(value.toLowerCase())
             )
             .map((item, index) => (
-              <li style={{ zIndex: "9999" }} key={index}>
+              <li
+                className={styles["suggestion-item"]}
+                key={index}
+                onClick={() => {
+                  setValue(item);
+                  setShowSuggestions(false);
+                }}
+              >
                 {item}
               </li>
             ))}
@@ -34,6 +50,16 @@ const Autocomplete = ({ items }) => {
       )}
     </div>
   );
+};
+
+Autocomplete.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string),
+  placeholder: PropTypes.string
+};
+
+Autocomplete.defaultProps = {
+  items: [],
+  placeholder: "Search"
 };
 
 export default Autocomplete;
