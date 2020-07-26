@@ -2,21 +2,34 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
 
+//TODO
+// 1. Consume a GraphQL API to get the list of items
+// 2. Handle up and down keys
+// 3. Snapshot tests
+const findSuggestions = (items, value) => {
+  return items.filter(
+    (it) => !value || it.toLowerCase().startsWith(value.toLowerCase())
+  );
+};
+
 const Autocomplete = ({ items, placeholder }) => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
+
   const onKeyDown = (e) => {
     if (e.keyCode === 27) {
       setShowSuggestions(false);
     } else {
       setShowSuggestions(true);
     }
-    //TODO handle arrow keys
   };
+
+  const suggestions = findSuggestions(items, value);
 
   return (
     <div className={styles.container}>
       <input
+        name="autocomplete-input"
         placeholder={placeholder}
         type="text"
         className={styles.text}
@@ -30,22 +43,18 @@ const Autocomplete = ({ items, placeholder }) => {
       ></input>
       {showSuggestions && (
         <ul className={styles.suggestions}>
-          {items
-            .filter(
-              (it) => !value || it.toLowerCase().startsWith(value.toLowerCase())
-            )
-            .map((item, index) => (
-              <li
-                className={styles["suggestion-item"]}
-                key={index}
-                onClick={() => {
-                  setValue(item);
-                  setShowSuggestions(false);
-                }}
-              >
-                {item}
-              </li>
-            ))}
+          {suggestions.map((item, index) => (
+            <li
+              className={styles["suggestion-item"]}
+              key={index}
+              onClick={() => {
+                setValue(item);
+                setShowSuggestions(false);
+              }}
+            >
+              {item}
+            </li>
+          ))}
         </ul>
       )}
     </div>
