@@ -1,10 +1,10 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
-import { withKnobs, select, text } from "@storybook/addon-knobs"
-import { withInfo } from "@storybook/addon-info"
-import { Container, Social, Comment } from "../"
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withKnobs, select, text } from "@storybook/addon-knobs";
+import { withInfo } from "@storybook/addon-info";
+import { Container, Social, Comment } from "..";
 
-storiesOf("Components", module)
+storiesOf("HomePage Components", module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add("Container", () => (
@@ -46,4 +46,4 @@ storiesOf("Components", module)
         You can call it <br />
       </Comment>
     </Container>
-  ))
+  ));
