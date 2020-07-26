@@ -59,7 +59,10 @@ const App = () => {
         href="https://github.com/jmigueprieto"
         target="_blank"
       />
-      <Autocomplete items={languages}></Autocomplete>
+      <Autocomplete
+        items={languages}
+        placeholder="Search a Language"
+      ></Autocomplete>
     </Container>
   );
 };
