@@ -6,7 +6,7 @@ const Comment = ({ children }) => {
   const initComment = "/**";
   const endComment = "*/";
   return (
-    <p className={styles.comment}>
+    <div className={styles.comment}>
       {initComment} <br />
       {children
         .filter((it) => typeof it === "string")
@@ -14,7 +14,7 @@ const Comment = ({ children }) => {
           <div key={index}>&nbsp;* {line}</div>
         ))}
       &nbsp;{endComment}
-    </p>
+    </div>
   );
 };
 
