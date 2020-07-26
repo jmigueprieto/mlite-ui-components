@@ -1,5 +1,6 @@
 import React from "react";
 
+import "mlite-ui-components/dist/index.css";
 import {
   Container,
   Social,
@@ -8,7 +9,6 @@ import {
   Literal,
   Autocomplete
 } from "mlite-ui-components";
-import "mlite-ui-components/dist/index.css";
 
 const App = () => {
   const languages = [

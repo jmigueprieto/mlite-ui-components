@@ -2,6 +2,8 @@
 
 > This is a UI Component Library which I've started mainly rebuild my [homepage](https://mprieto.me) and to use it in [my blog](https://mprieto.me/blog).
 
+[![NPM](https://img.shields.io/npm/v/@jmigueprieto/mlite-ui-components.svg)](https://www.npmjs.com/package/@jmigueprieto/mlite-ui-components)
+
 ## Install
 
 ```bash
