@@ -13,8 +13,8 @@ npm install --save @jmigueprieto/mlite-ui-components
 ```jsx
 import React from "react";
 
-import { Page, Social } from "mlite-ui-components";
-import "mlite-ui-components/dist/index.css";
+import "@jmigueprieto/mlite-ui-components/dist/index.css";
+import { Page, Social } from "@jmigueprieto/mlite-ui-components";
 
 const App = () => {
   return (
