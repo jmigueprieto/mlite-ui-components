@@ -53,9 +53,33 @@ const App = () => {
         LDC <Literal>"¡Aló Mundillo!"</Literal> <br />
         INVOKEVIRTUAL HomePage.publish (Ljava/lang/String;)V <br />
       </Bytecode>
-      <Social type="twitter" href="https://twitter.com/jmigueprieto" />
+      <Social
+        type="facebook"
+        href="https://facebook.com/jmigueprieto"
+        target="_blank"
+      />
+      <Social
+        type="contact"
+        href="https://github.com/jmigueprieto"
+        target="_blank"
+      />
       <Social
         type="github"
+        href="https://github.com/jmigueprieto"
+        target="_blank"
+      />
+      <Social
+        type="instagram"
+        href="https://github.com/jmigueprieto"
+        target="_blank"
+      />
+      <Social
+        type="linkedin"
+        href="https://github.com/jmigueprieto"
+        target="_blank"
+      />
+      <Social
+        type="twitter"
         href="https://github.com/jmigueprieto"
         target="_blank"
       />

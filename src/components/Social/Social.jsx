@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../styles/styles.module.scss";
 
-import ContactIcon from "../../assets/svg/contact.svg";
-import FacebookIcon from "../../assets/svg/facebook.svg";
-import GithubIcon from "../../assets/svg/github.svg";
-import InstagramIcon from "../../assets/svg/instagram.svg";
-import LinkedinIcon from "../../assets/svg/linkedin.svg";
-import TwitterIcon from "../../assets/svg/twitter.svg";
+import ContactIcon from "./Icons/ContactIcon";
+import FacebookIcon from "./Icons/FacebookIcon";
+import GithubIcon from "./Icons/GithubIcon";
+import InstagramIcon from "./Icons/InstagramIcon";
+import LinkedinIcon from "./Icons/LinkedinIcon";
+import TwitterIcon from "./Icons/TwitterIcon";
 
 const Social = ({ type, href, target }) => {
   const attrs = {
@@ -29,7 +29,7 @@ const Social = ({ type, href, target }) => {
 
   return (
     <a href={href} {...(target ? { target: target } : {})}>
-      <img className={styles.icon} src={attrs.src} alt={attrs.alt} />
+      <attrs.src className={styles.icon} />
     </a>
   );
 };

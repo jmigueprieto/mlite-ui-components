@@ -1,7 +1,13 @@
 import React from "react";
-import Social from "./Social";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import FacebookIcon from "./Icons/FacebookIcon";
+import TwitterIcon from "./Icons/TwitterIcon";
+import Social from "./Social";
+import ContactIcon from "./Icons/ContactIcon";
+import GithubIcon from "./Icons/GithubIcon";
+import InstagramIcon from "./Icons/InstagramIcon";
+import LinkedinIcon from "./Icons/LinkedinIcon";
 
 configure({ adapter: new Adapter() });
 
@@ -22,41 +28,64 @@ describe("Social", () => {
     );
   });
 
-  it("to contain correct attributes", () => {
-    const props = [
-      { type: "contact", href: "mailto:hello@mprieto.me" },
-      {
-        type: "facebook",
-        href: "https://facebook.com/jmigueprieto",
-        target: "_self"
-      },
-      {
-        type: "github",
-        href: "https://github.com/jmigueprieto",
-        target: "_blank"
-      },
-      {
-        type: "instagram",
-        href: "https://www.instagram.com/jmigueprieto",
-        target: "_blank"
-      },
-      { type: "linkedin", href: "https://www.linkedin.com/in/jmigueprieto" },
-      {
-        type: "twitter",
-        href: "https://twitter.com/miguelprieto"
-      }
-    ];
-
-    const wrapper = shallow(
-      <Social type="twitter" href="https://twitter.com/miguelprieto" />
-    );
+  //TODO refactor. Extract function to avoid repeated code
+  it("to render components correctly for type facebook", () => {
+    const wrapper = shallow(<Social type="facebook" href="fake_url" />);
     const link = wrapper.find("a");
     expect(link).toHaveLength(1);
-    expect(link.prop("href")).toBe("https://twitter.com/miguelprieto");
+    expect(link.prop("href")).toBe("fake_url");
 
-    const image = link.find("img");
-    expect(image).toHaveLength(1);
-    expect(image.prop("src")).toBe("twitter.svg");
-    expect(image.prop("alt")).toBe("Twitter");
+    const icon = link.find(FacebookIcon);
+    expect(icon).toHaveLength(1);
+  });
+
+  it("to render components correctly for type contact", () => {
+    const wrapper = shallow(<Social type="contact" href="fake_url" />);
+    const link = wrapper.find("a");
+    expect(link).toHaveLength(1);
+    expect(link.prop("href")).toBe("fake_url");
+
+    const icon = link.find(ContactIcon);
+    expect(icon).toHaveLength(1);
+  });
+
+  it("to render components correctly for type github", () => {
+    const wrapper = shallow(<Social type="github" href="fake_url" />);
+    const link = wrapper.find("a");
+    expect(link).toHaveLength(1);
+    expect(link.prop("href")).toBe("fake_url");
+
+    const icon = link.find(GithubIcon);
+    expect(icon).toHaveLength(1);
+  });
+
+  it("to render components correctly for type instagram", () => {
+    const wrapper = shallow(<Social type="instagram" href="fake_url" />);
+    const link = wrapper.find("a");
+    expect(link).toHaveLength(1);
+    expect(link.prop("href")).toBe("fake_url");
+
+    const icon = link.find(InstagramIcon);
+    expect(icon).toHaveLength(1);
+  });
+
+  it("to render components correctly for type linkedin", () => {
+    const wrapper = shallow(<Social type="linkedin" href="fake_url" />);
+    const link = wrapper.find("a");
+    expect(link).toHaveLength(1);
+    expect(link.prop("href")).toBe("fake_url");
+
+    const icon = link.find(LinkedinIcon);
+    expect(icon).toHaveLength(1);
+  });
+
+  it("to render components correctly for type twitter", () => {
+    const wrapper = shallow(<Social type="twitter" href="fake_url" />);
+    const link = wrapper.find("a");
+    expect(link).toHaveLength(1);
+    expect(link.prop("href")).toBe("fake_url");
+
+    const icon = link.find(TwitterIcon);
+    expect(icon).toHaveLength(1);
   });
 });
