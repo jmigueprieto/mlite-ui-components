@@ -58,11 +58,7 @@ const App = () => {
         href="https://facebook.com/jmigueprieto"
         target="_blank"
       />
-      <Social
-        type="contact"
-        href="https://github.com/jmigueprieto"
-        target="_blank"
-      />
+      <Social type="contact" href="mailto:hello@mprieto.ne" target="_blank" />
       <Social
         type="github"
         href="https://github.com/jmigueprieto"
@@ -70,17 +66,17 @@ const App = () => {
       />
       <Social
         type="instagram"
-        href="https://github.com/jmigueprieto"
+        href="https://instagram.com/jmigueprieto"
         target="_blank"
       />
       <Social
         type="linkedin"
-        href="https://github.com/jmigueprieto"
+        href="https://linkedin.com/in/jmigueprieto"
         target="_blank"
       />
       <Social
         type="twitter"
-        href="https://github.com/jmigueprieto"
+        href="https://twitter.com/miguelprieto"
         target="_blank"
       />
       <Autocomplete
