@@ -11,7 +11,6 @@ const LinkedinIcon = ({ width, height, className, style }) => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 56.693 56.693"
-      enable-background="new 0 0 56.693 56.693"
     >
       <g fill="#ccc">
         <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z" />

@@ -9,7 +9,6 @@ const TwitterIcon = ({ width, height, className, style }) => {
       height={height}
       style={style}
       viewBox="0 0 56.693 56.693"
-      enable-background="new 0 0 56.693 56.693"
     >
       <path
         fill="#ccc"
