@@ -2,7 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text, array } from "@storybook/addon-knobs";
 import { withInfo } from "@storybook/addon-info";
-import { Container, Autocomplete } from "..";
+
+import "@jmigueprieto/mlite-ui-components/dist/index.css";
+import { Container, Autocomplete } from "@jmigueprieto/mlite-ui-components";
 
 storiesOf("Autocomplete", module)
   .addDecorator(withKnobs)

@@ -2,7 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, select, text } from "@storybook/addon-knobs";
 import { withInfo } from "@storybook/addon-info";
-import { Container, Social, Comment } from "..";
+
+import "@jmigueprieto/mlite-ui-components/dist/index.css";
+import { Container, Social, Comment } from "@jmigueprieto/mlite-ui-components";
 
 storiesOf("HomePage Components", module)
   .addDecorator(withKnobs)
