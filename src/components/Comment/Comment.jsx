@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "../../styles/styles.module.scss";
 
-const Comment = ({ children }) => {
+const Comment = ({ children, style }) => {
   const initComment = "/**";
   const endComment = "*/";
   return (
-    <div className={styles.comment}>
+    <div className={styles.comment} style={style}>
       {initComment} <br />
       {children
         .filter((it) => typeof it === "string")

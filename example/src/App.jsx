@@ -6,42 +6,13 @@ import {
   Social,
   Comment,
   Bytecode,
-  Literal,
-  Autocomplete
+  Literal
 } from "@jmigueprieto/mlite-ui-components";
 
 const App = () => {
-  const languages = [
-    "Ada",
-    "C",
-    "C++",
-    "C#",
-    "Clojure",
-    "Erlang",
-    "Basic",
-    "Java",
-    "JavaScript",
-    "Kotlin",
-    "Groovy",
-    "Scala",
-    "TypeScript",
-    "Go",
-    "Visual Basic",
-    "Fortran",
-    "Python",
-    "R",
-    "SQL",
-    "Bash",
-    "Lua",
-    "Rust",
-    "PHP",
-    "Swift",
-    "Ruby",
-    "Lisp"
-  ].sort();
   return (
     <Container>
-      <Comment>
+      <Comment style={{ paddingTop: "1rem" }}>
         Aloha <br />
         From Hawaii! <br />
         @author It's Elvis <br />
@@ -53,12 +24,12 @@ const App = () => {
         LDC <Literal>"¡Aló Mundillo!"</Literal> <br />
         INVOKEVIRTUAL HomePage.publish (Ljava/lang/String;)V <br />
       </Bytecode>
+      <Social type="contact" href="mailto:hello@mprieto.me" target="_blank" />
       <Social
         type="facebook"
         href="https://facebook.com/jmigueprieto"
         target="_blank"
       />
-      <Social type="contact" href="mailto:hello@mprieto.ne" target="_blank" />
       <Social
         type="github"
         href="https://github.com/jmigueprieto"
@@ -79,10 +50,6 @@ const App = () => {
         href="https://twitter.com/miguelprieto"
         target="_blank"
       />
-      <Autocomplete
-        items={languages}
-        placeholder="Search a Language"
-      ></Autocomplete>
     </Container>
   );
 };
